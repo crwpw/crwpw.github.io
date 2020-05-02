@@ -5,46 +5,26 @@
 <meta charset="UTF-8" />
 <meta name="theme-color" content="rgb(32,32,32)" />
 <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,shrink-to-fit=no" />
-<style>
-body { background: #000; margin: 0; padding: 0; border: 0; box-sizing: border-box; }
-canvas { background: #000; display: block; margin: 0; padding: 0; border: 0; box-sizing: border-box; }
-</style>
+<link rel="stylesheet" type="text/css" href="css/main.css">
+<link rel="stylesheet" type="text/css" href="css/theme.css">
 </head>
 <body>
-<div id="threejs"></div>
-<script src="lib/three.js"></script>
-<script>
-
-var HEIGHT = ( window.innerWidth + window.innerHeight ) / 4
-
-var scene = new THREE.Scene();
-var camera = new THREE.PerspectiveCamera( 24, window.innerWidth/HEIGHT, 0.1, 1000 );
-var renderer = new THREE.WebGLRenderer();
-renderer.setSize( window.innerWidth, HEIGHT );
-threejs.appendChild( renderer.domElement );
-
-var geometry = new THREE.PlaneGeometry();
-var material = new THREE.MeshBasicMaterial( { color: 0xddeeff, wireframe: true } );
-var cube = new THREE.Mesh( geometry, material );
-scene.add( cube );
-camera.position.z = 5;
-
-var animate = function () {
-	requestAnimationFrame( animate );
-	cube.rotation.y += 0.01;
-	renderer.render( scene, camera );
-};
-
-animate();
-
-function onWindowResize() {
-	camera.aspect = window.innerWidth / HEIGHT;
-	camera.updateProjectionMatrix();
-	renderer.setSize( window.innerWidth, HEIGHT );
-}
-
-window.addEventListener( 'resize', onWindowResize, false );
-
-</script>
+<header>
+<div class="container">
+<div class="row">
+<div class="col pt1 pb1">
+<h2 class="lh1">nucld</h2>
+</div>
+</div>
+</div>
+</header>
+<div class="container">
+<div class="row">
+<div class="col-auto">
+<h1 class="pt1">Test</h1>
+<p>Hello my dear friend, you welcome</p>
+</div>
+</div>
+</div>
 </body>
 </html>
